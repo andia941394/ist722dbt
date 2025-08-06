@@ -1,0 +1,45 @@
+
+version: 2
+
+models:
+  - name: dim_product
+    description: Product Dimension. One row per product.
+    columns:
+      - name: productkey
+        description: The surrogate key of the product
+        tests:
+          - not_null
+          - unique
+
+      - name: productid
+        description: The business/source key of the product
+        tests:
+          - not_null
+          - unique
+
+      - name: productname
+        description: Name of the product
+
+      - name: supplierid
+        description: Foreign key to supplier dimension
+
+      - name: categoryid
+        description: Foreign key to category dimension
+
+      - name: quantityperunit
+        description: Description of how the product is packaged
+
+      - name: unitprice
+        description: Unit price of the product
+
+      - name: unitsinstock
+        description: Number of units currently in stock
+
+      - name: unitsonorder
+        description: Number of units currently on order
+
+      - name: reorderlevel
+        description: Minimum number of units before reorder is triggered
+
+      - name: discontinued
+        description: Whether the product is discontinued (1 = yes, 0 = no)

@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: obt_fact_sales
+    description: |
+      One-Big-Table for sales: joins fact_sales
+      to dim_date, dim_customer, and dim_product,
+      flattening all attributes into a single wide table
+      for BI consumption.
