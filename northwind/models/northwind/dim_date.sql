@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 select     
-    datekey::int as datekey,
+    CAST(datekey AS INT) AS datekey,
     date,
     year,
     month,
