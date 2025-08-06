@@ -37,6 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   northwind:
-      +materialized: table
-      database: analytics
-      +schema: northwind 
+    +schema: northwind
+    +database: analytics
+    +materialized: table
+
